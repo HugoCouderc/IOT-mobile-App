@@ -1,0 +1,16 @@
+<ion-view view-title="MyCams">
+  <ion-content>
+    <h1>My Cameras</h1>
+    <div class="container">
+        <ul class="list-group">
+            <li ng-repeat="cam in camList" class="list-group-item">
+
+              <h3> <b> {{cam.name}} </b></h3>
+              <p> blablabla </p>
+              <span class="tag tag-default tag-pill float-xs-right"> <button class="btn btn-info" ng-click="manageRights(cam)"> manage rights </button></span>
+            </li>
+        </ul>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<ion-view view-title="MyRights">
+  <ion-content>
+    <h1>My Rights</h1>
+
+    <div class="container">
+        <ul class="list-group">
+            <li ng-repeat="right in rightList" class="list-group-item">
+
+              <h3> <b> {{right.name}} ------- Permission : {{right.permission}} </b></h3>
+              <p> blablabla </p>
+              <span class="tag tag-default tag-pill float-xs-right">
+                <span class="tag tag-default tag-pill float-xs-right"> <button class="btn btn-success" ng-click="watchCamera(right.camID)"> watch </button></span>
+                <button class="btn btn-danger"> On/Off </button>
+              </span>
+            </li>
+        </ul>
+
+    </div>
+  </ion-content>
+</ion-view>

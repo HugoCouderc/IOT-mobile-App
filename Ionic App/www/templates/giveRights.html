@@ -1,0 +1,44 @@
+<ion-view view-title="giveRights">
+  <ion-content>
+    <h1>Manage rights on camera : <div class="btn btn-primary" >{{thisCam.name}} </div> </h1>
+      </br>
+        </br>
+    <div class="container col-xs-6">
+
+      <ul class="list-group">
+          <li ng-repeat="user in userRightList" class="list-group-item">
+
+            <h3> <b> {{user.username}} </b></h3>
+            <p> {{user.email}} </p>
+
+            <label class="checkbox-lined"><input type="checkbox" value="" checked>   Watch</label>
+            <label class="checkbox-lined"><input type="checkbox" value=""checked>   Rotate</label>
+            <label class="checkboxlined"><input type="checkbox" value=""checked>   Turn On/Off</label>
+          </br></br>
+
+          <input type="submit" ng-click="update(user)" value="Save" />
+          </li>
+      </ul>
+
+    </div>
+
+    <div class="container col-xs-6 panel panel-primary">
+      <div class="panel-heading"> Add a new User </div>
+      <div class="panel-body">
+
+        <form class="addCameraForm">
+          UserName: <input type="text" class="form-control" ng-model="newRight.username"/><br />
+
+          </br>
+          <label class="checkbox"><input type="checkbox" value="1" ng-model="newRight.watch">   Watch</label>
+          <label class="checkbox"><input type="checkbox" value="2" ng-model="newRight.rotate">   Rotate</label>
+          <label class="checkbox"><input type="checkbox" value="3" ng-model="newRight.turn">   Turn On/Off</label>
+          </br>
+          </br>
+          <button class="btn btn-info" ng-click="newRights()"> save </button>
+        </form>
+      </div>
+
+</div>
+  </ion-content>
+</ion-view>
